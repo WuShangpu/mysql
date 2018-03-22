@@ -13,3 +13,7 @@ SHOW GRANTS; 用来显示授予用户（所有用户或特定用户）的安全权限
 SHOW ERRORS;和SHOW WARNINGS 用来显示服务器错误和警告信息
 
 HELP SHOW; 用于显示关于show的相关信息
+
+INFORMATION_SCHEMA 用来获得和过滤模式信息（不懂啥意思）
+
+在实际使用这些命令时，可以用小写
