@@ -7,8 +7,8 @@ DESCRIBE tablename= SHOW COLUMNS FROM tablename;
 
 一些其他的SHOW语句：
 SHOW STATUS; 用于显示服务器状态信息
-SHOW CREATE DATABASE dbname;和SHOW CREATE TABLE tbname; 分别用来显示创建特定数据库
-                                           或表的Mysql语句
+SHOW CREATE DATABASE dbname;和SHOW CREATE TABLE tbname; 分别用来显示创建
+                                               特定数据库或表的Mysql语句
 SHOW GRANTS; 用来显示授予用户（所有用户或特定用户）的安全权限
 SHOW ERRORS;和SHOW WARNINGS 用来显示服务器错误和警告信息
 
