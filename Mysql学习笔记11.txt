@@ -1,0 +1,15 @@
+第13章 分组数据
+本章将介绍如何分组数据，以便能汇总表内容的子集。这涉及两个新的SELECT子句，
+分别是GROUP BY 和 HAVING.
+1.分组允许把数据分为对个逻辑组，以便进行聚类计算。
+2.GROUP BY vend_id WITH ROLLUP 可以将NULL的行也统计出来
+3.GROUP BY 子句可以包含任意多的列
+4.在SELECT 中的列名必须也在GROUP BY 后面指定
+5.分组列中有NULL值时，也会被单独分为一组
+6.GROUP BY 子句必须出现在WHERE后，出现在ORDER BY 前。
+7.HAVING就是分组筛选中的WHERE
+8.WHERE过滤行，而HAVING过滤分分组。
+9.关于WHERE的所有技术和选项都适用于HAVING
+10.ORDER BY 与GROUP BY 的区别
+11.排序一定要加ORDER BY ,不能仅依靠GROUP BY
+12.SELECT子句及其顺序
