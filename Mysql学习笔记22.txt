@@ -1,0 +1,19 @@
+第24章 使用游标
+1.有时，需要在检索出来的行中前进或者后退一行或者多行，这个时候就需要是用游标。
+2.游标是一个存储在服务器上的数据库查询，它不是一条SELECT语句，而是被该语句检索出来的结果集。
+3.Mysql游标只能用于存储过程和函数。
+4.游标的使用方法：定义游标---打开游标---使用游标---关闭游标
+5.可以根据需要频繁地打开和关闭游标，打开游标后，可以频繁地执行取操作
+6.定义方式：CREATE PROCEDURE processorders（）
+                BEGIN
+                  DECLARE ordernumbers
+                CURSOR
+                  FOR
+                  SELECT ordernum FROM orders；
+                END；
+7.打开游标用OPEN cursorname；关闭游标CLOSE cursorname；
+8.如果你不明确关闭游标，mysql会在到达END时关闭游标。
+9.DECLARE CONTINUE HANDLER FOR SQLSTATE '02000' SET done = 1；表示当SQLSTATE '02000'出现时，将done设置为1.当repeat
+  由于没有更多地行供循环时出现这个标志SQLSTATE '02000'。
+10.DECLARE语句地次序：定义局部变量---定义游标---定义句柄（结束条件应该是句柄地一种）
+11.

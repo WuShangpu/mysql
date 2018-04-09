@@ -1,0 +1,15 @@
+第25章 使用触发器
+触发器，顾名思义，即使在条件满足地情况下，自动触发地东西。
+1.mysql只响应一下语句：DELETE INSERT UPDATE
+2.创建触发器需要四条信息：唯一的触发器名（每个表中唯一，数据库中不要求）、触发器关联的表、
+  触发器应该响应的活动（DELETE\INSERT\UPDATE)、触发器执行的时机（处理前或者之后）
+3.例子：CREATE TRIGGER newproduct AFTER INSERT
+        ON products
+        FOR EACH ROW SELECT
+        'Product added';
+4.只有表猜支持触发器，视图不支持
+5.每个表最多支持6个触发器，单一触发器不能与多个事件或多个表关联。
+6.若BEFORE触发器失败，则不执行请求的操作，若BEFORE触发器或者语句本身失败，则不执行AFTER触发器（若有的话）。
+7.DROP TRIGGER newproducts；删除触发器
+8.触发器不能修改或覆盖，要修改它，只能先删除。
+9.
